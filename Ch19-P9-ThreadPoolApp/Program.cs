@@ -24,5 +24,11 @@ namespace Ch19_P9_ThreadPoolApp
             Console.WriteLine("All tasks queued");
             Console.ReadLine();
         }
+
+        private static void PrintTheNumbers(object state)
+        {
+            Printer task = (Printer)state;
+            task.PrintNumbers();
+        }
     }
 }
